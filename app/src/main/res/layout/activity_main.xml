@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- In CollapsingToolbarLayout sompe important attributes are:
+         i)  app:layout_scrollFlags which is used to specify how collapsing
+             layout behaves when content is scrolled.I have used
+             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+             so it will scroll until it's is completely collapsed.
+         ii) app:contentScrim="@color/green" that specifies the color
+              of the collapsed toolbar -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <!-- Search bar -->
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:id="@+id/searchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <!-- The attribute app:layout_collapseMode="pin" is set so that
+                 sticks to the top when the user scrolls the view up-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarBtn"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchBarEt"
+                    app:layout_collapseMode="pin"
+                    android:hint="Search..."
+                    android:textColorHint="#818181"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notFound"
+            android:visibility="gone"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/nothingg"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:text="@string/nothing_to_see_here"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/playerLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="260dp">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/contentImageIV"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="280dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            tools:src="@drawable/joker_movie" />-->
+<!--        <com.google.android.exoplayer2.ui.PlayerView-->
+<!--            android:id="@+id/videoView"-->
+<!--            app:show_buffering="always"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:auto_show="true"-->
+<!--            app:resize_mode="fit"-->
+<!--            app:controller_layout_id="@layout/exo_controller"-->
+<!--            app:surface_type="surface_view"-->
+<!--            app:use_controller="true"-->
+<!--            />-->
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/playVideoBtn"-->
+<!--            android:layout_width="@dimen/_50sdp"-->
+<!--            android:layout_height="@dimen/_50sdp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@drawable/ic_play_circle" />-->
+<!--    </RelativeLayout>-->
+
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--        &lt;!&ndash; In CollapsingToolbarLayout sompe important attributes are:-->
+<!--         i)  app:layout_scrollFlags which is used to specify how collapsing-->
+<!--             layout behaves when content is scrolled.I have used-->
+<!--             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"-->
+<!--             so it will scroll until it's is completely collapsed.-->
+<!--         ii) app:contentScrim="@color/green" that specifies the color-->
+<!--              of the collapsed toolbar &ndash;&gt;-->
+<!--        <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:contentScrim="@android:color/transparent"-->
+<!--            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">-->
+
+
+<!--            &lt;!&ndash; The attribute app:layout_collapseMode="pin" is set so that-->
+<!--                 sticks to the top when the user scrolls the view up&ndash;&gt;-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbarBtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:layout_collapseMode="pin"-->
+<!--                app:navigationIcon="@drawable/ic_back_white"-->
+<!--                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />-->
+
+<!--        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/nestedScroll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/top_round_bg"-->
+<!--            android:paddingHorizontal="@dimen/_10sdp"-->
+<!--            android:paddingTop="@dimen/_30sdp">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/isFavoritesBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_unfavorite"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/titleTxt"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/sf_regular"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/_16sdp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:text="Mulan" />-->
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:id="@+id/linearLayoutCompat"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="@dimen/_10sdp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/titleTxt">-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/yearTxt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/sf_regular"-->
+<!--                    android:text="@string/_2020"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_14sdp" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="1dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--                    android:background="@color/transparentColor" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/ageFactor"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/sf_regular"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_14sdp"-->
+<!--                    tools:text="@string/_2020" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="1dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--                    android:background="@color/transparentColor" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/contentType"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/sf_regular"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_14sdp"-->
+<!--                    tools:text="@string/_2020" />-->
+
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/appCompatImageView3"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginVertical="@dimen/_10sdp"-->
+<!--                android:src="@drawable/ic_star"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/ratingTxt"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:fontFamily="@font/sf_regular"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/_14sdp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView3"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/appCompatImageView3"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/appCompatImageView3"-->
+<!--                tools:text="8.8" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/space"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height=".5dp"-->
+<!--                android:layout_marginVertical="@dimen/_10sdp"-->
+<!--                android:background="@color/transparentColor"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/descriptionTxt"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/ratingTxt" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/descriptionTxt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/space"-->
+<!--                tools:text="Description - During the Northern Wei Dynasty, Mulan joined the army for his father and returned with honor. Ten years later, Rouran broke the border again, and Mulan resolutely returned to the battlefield." />-->
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/descriptionTxt">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/trailerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginVertical="@dimen/_15sdp"-->
+<!--                    tools:layout_editor_absoluteX="13dp">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/watch_trailer"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Watch Trailer"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/_14sdp"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/watch_trailer">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                                android:id="@+id/trailerPosterIV"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="180dp"-->
+<!--                                android:scaleType="centerCrop"-->
+<!--                                tools:src="@drawable/joker_movie" />-->
+
+<!--                            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                                android:id="@+id/playTrailerVideoBtn"-->
+<!--                                android:layout_width="@dimen/_50sdp"-->
+<!--                                android:layout_height="@dimen/_50sdp"-->
+<!--                                android:layout_centerInParent="true"-->
+<!--                                android:src="@drawable/ic_play_circle" />-->
+<!--                        </RelativeLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                    android:id="@+id/seriesView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/descriptionTxt">-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/seriesListingRv"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_marginVertical="@dimen/_15sdp"-->
+<!--                        android:background="@color/grayColor" />-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/recommendedType"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="@dimen/_14sdp"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            tools:text="Recommended Series" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/seeAllBtn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_marginEnd="@dimen/_5sdp"-->
+<!--                            android:text="@string/see_all"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="@dimen/_14sdp" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recommendedRecyclerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+</androidx.appcompat.widget.LinearLayoutCompat>
